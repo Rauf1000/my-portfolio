@@ -1,17 +1,22 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, sans-serif;
 }
 
-body{
+html {
+    scroll-behavior: smooth;
+    font-size: 15px;
+}
+
+
+body {
     background: #0e0e0e;
     color: white;
 }
 
 /* NAVBAR */
-header{
+header {
     width: 100%;
     padding: 20px 40px;
     display: flex;
@@ -22,93 +27,200 @@ header{
     top: 0;
 }
 
-header .logo{
-    font-size: 24px;
+header .logo {
+    font-size: 3.4rem;
     font-weight: bold;
 }
 
-nav a{
+nav a {
     color: #ddd;
-    margin-left: 20px;
+    margin-left: 2rem;
     text-decoration: none;
 }
-nav a:hover{
-    color: #4da3ff;
+
+nav a:hover {
+    color: #3376bc;
 }
 
 /* HERO SECTION */
-.hero{
+.hero {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 80px 40px;
+    padding: 8rem 4rem;
 }
 
-.hero h1{
-    font-size: 48px;
+.hero h1 {
+    font-size: 4.8rem;
 }
 
-.hero p{
+.hero p {
     color: #ccc;
-    margin-top: 10px;
+    margin-top: 1rem;
 }
 
-.hero-img img{
+.hero-img img {
     width: 300px;
 }
 
 /* SKILLS */
-.skills{
-    padding: 60px 40px;
+.skills {
+    padding: 6rem 4rem;
     text-align: center;
 }
 
-.skill-box{
-    margin-top: 20px;
+.skill-box {
+    display: flex;
+    justify-content: center;
+
+    margin-top: 2rem;
 }
 
-.skill-box span{
+.skill-box span {
     display: inline-block;
     background: #0f244f;
-    padding: 12px 25px;
-    margin: 10px;
-    border-radius: 10px;
+    padding: 1.2rem 2rem;
+    margin: 1rem;
+    border-radius: 1rem;
     border: 1px solid #333;
     cursor: pointer;
 }
 
 .skill-box span:hover {
-  opacity: 0.6;
-  transition: opacity 0.5s;
-  background-color: #631212e0;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+    background-color: #631212e0;
 }
 
 /* PROJECTS */
-.projects{
-    padding: 60px 40px;
+.projects {
+    padding: 6rem 4rem;
 }
 
-.project-card{
+.project-card {
     background: #181818;
-    padding: 25px;
-    margin: 15px 0;
-    border-radius: 10px;
-    border: 1px solid #333;
+    padding: 2.5rem;
+    margin: 1.5rem 0;
+    border-radius: 1rem;
+    border: 1rem solid #333;
 }
 
-.project-card h3{
-    margin-bottom: 8px;
+.project-card h3 {
+    margin-bottom: 0.80rem;
 }
 
 /* CONTACT */
-.contact{
-    padding: 60px 40px;
+.contact {
+    padding: 6rem 4rem;
 }
 
 /* FOOTER */
-footer{
-    margin-top: 50px;
+footer {
+    margin-top: 5rem;
     text-align: center;
-    padding: 20px;
+    padding: 2rem;
     background: #111;
+}
+
+/* İMG */
+img {
+    border-radius: 20%;
+    border: 1px solid #333;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s;
+}
+
+/* RESPONSIVE NAVBAR FIX */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 18px 25px;
+    background: #111;
+    flex-wrap: nowrap;
+}
+
+nav {
+    display: flex;
+    gap: 1.2rem;
+}
+
+nav a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 1rem;
+    white-space: nowrap;
+}
+
+/* --- 800px --- */
+@media (max-width: 800px) {
+    header {
+        padding: 14px 18px;
+    }
+
+    header .logo {
+        font-size: 2.4rem;
+    }
+}
+
+/* --- 600px: NAV BELOW LOGO --- */
+@media (max-width: 600px) {
+    header {
+        flex-wrap: wrap;
+        /* logo yuxarı, nav aşağı */
+        justify-content: center;
+        text-align: center;
+        padding: 12px 15px;
+    }
+
+    header .logo {
+        width: 100%;
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 8px;
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 0.7rem;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+        padding: 6px 8px;
+    }
+}
+
+/* --- 420px: SMALLEST PHONES --- */
+@media (max-width: 420px) {
+    header .logo {
+        font-size: 1.7rem;
+    }
+
+    nav a {
+        font-size: 0.82rem;
+        padding: 5px 6px;
+    }
+
+    nav {
+        gap: 0.4rem;
+    }
+}
+
+/* --- 360px: Extra Narrow --- */
+@media (max-width: 360px) {
+    header .logo {
+        font-size: 1.5rem;
+    }
+
+    nav a {
+        font-size: 0.78rem;
+        padding: 4px 5px;
+    }
+
+    nav {
+        gap: 0.3rem;
+    }
 }
